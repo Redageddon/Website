@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-150 -150 1324 1324" width="512" height="512">
+  <defs>
+    <path id="arrow" d="M 512 16 L 576 174 L 544 175.5
+                        L 536 396 L 512 495
+                        L 488 396 L 480 175.5
+                        L 448 174 Z" fill="#FF0000"/>
+    <path id="spike" d="M 512 208 Q 478 279.5 512 351 Q 546 279.5 512 208 Z" fill="#FF0000"/>
+  </defs>
+
+  <!-- Background -->
+  <rect x="-150" y="-150" width="1324" height="1324" fill="#000000"/>
+
+  <!-- Rings -->
+  <circle cx="512" cy="512" r="232" fill="none" stroke="#FF0000" stroke-width="48"/>
+  <circle cx="512" cy="512" r="112" fill="none" stroke="#FF0000" stroke-width="32"/>
+
+  <!-- Ring spikes: slow counterclockwise orbit -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate"
+                      from="0 512 512" to="-360 512 512"
+                      dur="36s" repeatCount="indefinite"/>
+    <use href="#spike" transform="rotate(22.5 512 512)"/>
+    <use href="#spike" transform="rotate(67.5 512 512)"/>
+    <use href="#spike" transform="rotate(112.5 512 512)"/>
+    <use href="#spike" transform="rotate(157.5 512 512)"/>
+    <use href="#spike" transform="rotate(202.5 512 512)"/>
+    <use href="#spike" transform="rotate(247.5 512 512)"/>
+    <use href="#spike" transform="rotate(292.5 512 512)"/>
+    <use href="#spike" transform="rotate(337.5 512 512)"/>
+  </g>
+
+  <!-- Directional arrows: slow rise outward, quick jab back, desynced -->
+  <g transform="rotate(0 512 512)"><use href="#arrow">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,0; 0,-152; 0,6; 0,0; 0,0"
+      keyTimes="0; 0.10; 0.82; 0.88; 0.93; 1"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.42 0 0.58 1; 0.6 0 1 0.5; 0 0.6 0.4 1; 0 0 1 1"
+      dur="6.1s" begin="-0.4s" repeatCount="indefinite"/>
+  </use></g>
+  <g transform="rotate(45 512 512)"><use href="#arrow">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,0; 0,-152; 0,6; 0,0; 0,0"
+      keyTimes="0; 0.10; 0.82; 0.88; 0.93; 1"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.42 0 0.58 1; 0.6 0 1 0.5; 0 0.6 0.4 1; 0 0 1 1"
+      dur="5.8s" begin="-3.1s" repeatCount="indefinite"/>
+  </use></g>
+  <g transform="rotate(90 512 512)"><use href="#arrow">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,0; 0,-152; 0,6; 0,0; 0,0"
+      keyTimes="0; 0.10; 0.82; 0.88; 0.93; 1"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.42 0 0.58 1; 0.6 0 1 0.5; 0 0.6 0.4 1; 0 0 1 1"
+      dur="6.4s" begin="-1.7s" repeatCount="indefinite"/>
+  </use></g>
+  <g transform="rotate(135 512 512)"><use href="#arrow">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,0; 0,-152; 0,6; 0,0; 0,0"
+      keyTimes="0; 0.10; 0.82; 0.88; 0.93; 1"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.42 0 0.58 1; 0.6 0 1 0.5; 0 0.6 0.4 1; 0 0 1 1"
+      dur="5.9s" begin="-4.6s" repeatCount="indefinite"/>
+  </use></g>
+  <g transform="rotate(180 512 512)"><use href="#arrow">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,0; 0,-152; 0,6; 0,0; 0,0"
+      keyTimes="0; 0.10; 0.82; 0.88; 0.93; 1"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.42 0 0.58 1; 0.6 0 1 0.5; 0 0.6 0.4 1; 0 0 1 1"
+      dur="6.2s" begin="-2.3s" repeatCount="indefinite"/>
+  </use></g>
+  <g transform="rotate(225 512 512)"><use href="#arrow">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,0; 0,-152; 0,6; 0,0; 0,0"
+      keyTimes="0; 0.10; 0.82; 0.88; 0.93; 1"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.42 0 0.58 1; 0.6 0 1 0.5; 0 0.6 0.4 1; 0 0 1 1"
+      dur="5.7s" begin="-0.9s" repeatCount="indefinite"/>
+  </use></g>
+  <g transform="rotate(270 512 512)"><use href="#arrow">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,0; 0,-152; 0,6; 0,0; 0,0"
+      keyTimes="0; 0.10; 0.82; 0.88; 0.93; 1"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.42 0 0.58 1; 0.6 0 1 0.5; 0 0.6 0.4 1; 0 0 1 1"
+      dur="6.3s" begin="-5.2s" repeatCount="indefinite"/>
+  </use></g>
+  <g transform="rotate(315 512 512)"><use href="#arrow">
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 0,0; 0,-152; 0,6; 0,0; 0,0"
+      keyTimes="0; 0.10; 0.82; 0.88; 0.93; 1"
+      calcMode="spline"
+      keySplines="0 0 1 1; 0.42 0 0.58 1; 0.6 0 1 0.5; 0 0.6 0.4 1; 0 0 1 1"
+      dur="6.0s" begin="-3.8s" repeatCount="indefinite"/>
+  </use></g>
+</svg>
