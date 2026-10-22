@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>404 - Redageddon</title>
+  <!-- Absolute paths: this page is served for missing URLs at any depth -->
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" href="/favicon.ico">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+
+  <style>
+    .err {
+      font-size: 0.86rem;
+      letter-spacing: 0.07rem;
+      line-height: 1.5;
+      margin-bottom: 1.1rem;
+      overflow-wrap: anywhere;
+    }
+    .err .err-path { color: #ffffff; }
+    .err .err-msg  { color: #ff003c; }
+
+    .c-home  { background: rgba(255,0,60,0.08); }
+    .c-home:hover  { background: rgba(255,0,60,0.2); border-color: #ff003c; }
+    .c-home::before  { background: #ff003c; }
+    .c-home .tag { border-color: rgba(255,0,60,0.4); background: rgba(255,0,60,0.15); }
+
+    .footer .missing { color: #ff003c; }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="header">
+      <div class="logo">
+        <img src="/logo.svg" alt="Redageddon logo">
+      </div>
+      <div>
+        <h1 class="title">Redageddon<span class="cursor"></span></h1>
+        <div class="subtitle">// error 404: page not found</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+    <p class="cmd">&gt; cat <span id="path-cmd">that page</span></p>
+    <p class="err">
+      <span class="err-msg">cat:</span>
+      <span class="err-path" id="path-err">that page</span><span class="err-msg">: No such file or directory</span>
+    </p>
+
+    <p class="cmd">&gt; cd ~</p>
+    <div class="links">
+      <a class="link c-home" href="/">
+        <span class="link-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 2L2 9V18H8V13H12V18H18V9L10 2Z" fill="#ff003c"/>
+          </svg>
+        </span>
+        <span class="link-name">Back to links</span>
+        <span class="tag">home</span>
+      </a>
+    </div>
+
+    <p class="footer">redageddon.com &nbsp;//&nbsp; <span class="missing">404</span></p>
+
+  </div>
+
+  <script>
+    // Show the requested path. textContent keeps it from ever being parsed as HTML.
+    (function () {
+      var path = location.pathname;
+      try { path = decodeURIComponent(path); } catch (e) {}
+      if (path.length > 64) path = path.slice(0, 61) + '...';
+      document.getElementById('path-cmd').textContent = path;
+      document.getElementById('path-err').textContent = path;
+    })();
+  </script>
+</body>
+</html>
